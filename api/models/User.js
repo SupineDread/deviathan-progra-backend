@@ -43,6 +43,16 @@ module.exports = {
     roles: {
       type: 'array',
       defaultsTo: ['ROLE_ALUMNO']
+      // ROLE_ALUMNO  ROLE_PROFESOR ROLE_ADMIN
+    },
+
+    grupo: {
+      model: 'grupo'
+    },
+
+    clases: {
+      collection: 'ClaseHorario',
+      via: 'profesores'
     },
 
     toJSON: function () {

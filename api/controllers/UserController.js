@@ -19,6 +19,14 @@ module.exports = {
 			let token = jwt.sign(data, 'LaTecnicaAlServicioDeLaPatria');
 			return res.json({user: data, token: token});
 		})
+	},
+
+	getAllTeachers: function (req, res) {
+		User.find({roles: ['ROLE_PROFESOR']}).then(function(data) {
+		  return res.json(data);
+		}).catch(function(err) {
+		  return res.json(500, []);
+		});
 	}
 
 };
