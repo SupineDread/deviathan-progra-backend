@@ -20,10 +20,18 @@ module.exports = {
 					next(err);
 				});
 			}, () => {
-				console.log('Iterando por todos los reportes');
 				return res.json(data);
 			});
 		})
+	},
+
+	getUserReports: (req, res) => {
+		let id = req.param('id');
+		Reporte.find({user: id}).populateAll().then(function(data) {
+		  return res.json(data);
+		}).catch(function(err) {
+		  return res.json(500, {err: err});
+		});
 	}
 
 };

@@ -13,7 +13,7 @@ module.exports = {
 		let username = req.param('username');
 		let password = req.param('password');
 		let hash = sha256(password).toString();
-		User.findOne({username: username}).then(function(data) {
+		User.findOne({username: username}).populateAll().then(function(data) {
 		  if (!data) return res.json({err: 'Usuario no encontrado'});
 			if (data.password != hash) return res.json({err: 'Contraseña incorrecta'});
 			let token = jwt.sign(data, 'LaTecnicaAlServicioDeLaPatria');

@@ -11,6 +11,10 @@ module.exports = {
 
     item: {
       model: 'inventario'
+    },
+
+    user: {
+      model: 'user'
     }
 
   }
