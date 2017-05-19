@@ -16,6 +16,11 @@ module.exports = {
     reportes: {
       collection: 'reporte',
       via: 'item'
+    },
+
+    reservas: {
+      collection: 'reserva',
+      via: 'item'
     }
 
   }

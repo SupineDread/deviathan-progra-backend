@@ -1,5 +1,5 @@
 /**
- * Salon.js
+ * Reserva.js
  *
  * @description :: TODO: You might write a short summary of how this model works and what it represents here.
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
@@ -9,19 +9,16 @@ module.exports = {
 
   attributes: {
 
-    inventario: {
-      collection: 'inventario',
-      via: 'salon'
+    salon: {
+      model: 'salon'
     },
 
-    reservas: {
-      collection: 'reserva',
-      via: 'salon'
+    user: {
+      model: 'user'
     },
 
-    clases: {
-      collection: 'ClaseHorario',
-      via: 'salon'
+    item: {
+      model: 'inventario'
     }
 
   }

@@ -60,6 +60,11 @@ module.exports = {
       via: 'user'
     },
 
+    reservas: {
+      collection: 'reserva',
+      via: 'user'
+    },
+
     toJSON: function () {
       let user = this.toObject();
       delete user.password;

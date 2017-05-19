@@ -37,6 +37,10 @@ module.exports = {
       collection: 'user',
       via: 'clases',
       dominant: true
+    },
+
+    salon: {
+      model: 'salon'
     }
 
   }
