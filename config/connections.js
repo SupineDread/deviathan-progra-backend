@@ -37,6 +37,15 @@ module.exports.connections = {
     host: 'localhost',
     port: '27017',
     database: 'deviathanprogra'
+  },
+
+  mongoProd: {
+    adapter: 'sails-mongo',
+    host: 'ds147421.mlab.com',
+    port: '47421',
+    database: 'deviathanprogra',
+    user: 'progra',
+    password: '123'
   }
 
   /***************************************************************************
