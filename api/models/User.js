@@ -70,6 +70,11 @@ module.exports = {
       via: 'user'
     },
 
+    tareasAsProfesor: {
+      collection: 'tarea',
+      via: 'profesor'
+    },
+
     toJSON: function () {
       let user = this.toObject();
       delete user.password;

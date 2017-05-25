@@ -22,6 +22,11 @@ module.exports = {
     clasesHorario: {
       collection: 'ClaseHorario',
       via: 'materia'
+    },
+
+    tareas: {
+      collection: 'tarea',
+      via: 'materia'
     }
 
   }

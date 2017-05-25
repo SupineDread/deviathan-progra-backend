@@ -27,6 +27,11 @@ module.exports = {
     alumnos: {
       collection: 'user',
       via: 'grupo'
+    },
+
+    tareas: {
+      collection: 'tarea',
+      via: 'grupo'
     }
 
   }
