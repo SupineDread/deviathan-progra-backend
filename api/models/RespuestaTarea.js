@@ -1,5 +1,5 @@
 /**
- * Tarea.js
+ * RespuestaTarea.js
  *
  * @description :: TODO: You might write a short summary of how this model works and what it represents here.
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
@@ -9,21 +9,12 @@ module.exports = {
 
   attributes: {
 
-    materia: {
-      model: 'materia'
+    tarea: {
+      model: 'tarea'
     },
 
-    grupo: {
-      model: 'grupo'
-    },
-
-    profesor: {
+    alumno: {
       model: 'user'
-    },
-
-    respuestas: {
-      collection: 'RespuestaTarea',
-      via: 'tarea'
     }
 
   }

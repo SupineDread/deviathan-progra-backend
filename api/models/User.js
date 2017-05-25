@@ -75,6 +75,11 @@ module.exports = {
       via: 'profesor'
     },
 
+    respuestasTareas: {
+      collection: 'RespuestaTarea',
+      via: 'alumno'
+    },
+
     toJSON: function () {
       let user = this.toObject();
       delete user.password;
