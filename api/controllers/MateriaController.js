@@ -31,7 +31,6 @@ module.exports = {
 				  return res.json(500, {err: err});
 				});
 			}, () => {
-				console.log('Iterado por todos las clases');
 				return res.json(finalClases);
 			});
 		}).catch(function(err) {

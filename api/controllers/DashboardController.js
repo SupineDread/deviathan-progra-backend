@@ -8,6 +8,10 @@ const q = require('q');
 
 module.exports = {
 
+	upload: (req, res) => {
+
+	},
+
 	getAdminInfo: function (req, res) {
 		let qInfo = [
 			User.count({roles: ['ROLE_ALUMNO']}),
