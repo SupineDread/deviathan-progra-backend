@@ -80,6 +80,11 @@ module.exports = {
       via: 'alumno'
     },
 
+    clasesOnlineAsStreamer: {
+      collection: 'ClaseOnline',
+      via: 'streamer'
+    },
+
     toJSON: function () {
       let user = this.toObject();
       delete user.password;

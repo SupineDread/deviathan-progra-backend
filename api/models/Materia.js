@@ -27,6 +27,11 @@ module.exports = {
     tareas: {
       collection: 'tarea',
       via: 'materia'
+    },
+
+    clasesOnline: {
+      collection: 'ClaseOnline',
+      via: 'materia'
     }
 
   }
