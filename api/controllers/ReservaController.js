@@ -14,6 +14,16 @@ module.exports = {
     }).catch(function(err) {
       return res.json(500, {err: err});
     });
+  },
+
+  getReservaDetailByCode: (req, res) => {
+    let code = req.param('id');
+    Reserva.findOne({code: code}).populateAll().then(function(data) {
+      return res.json(data);
+    }).catch(function(err) {
+      console.log(err);
+      return res.json(500, {msg: err});
+    });
   }
 
 };
